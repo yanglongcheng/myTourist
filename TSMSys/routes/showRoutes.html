@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="YLC" />
+		<meta name="description" content="YLC旅游管理系统">
+		<link rel="stylesheet" href="/TSMSys/css/bootstrap.min.css" type="text/css">
+		<!-- <link rel="stylesheet" href="/TSMSys/css/bootstrap-icons.css" type="text/css"> -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+		<title>旅游管理系统</title>
+	</head>
+
+	<body>
+		<!-- 导航 -->
+		<div class="container-fluid px-0">
+			<!-- 头部 -->
+			<header class="navbar navbar-dark bg-primary navbar-expand-md">
+				<a href="#" class="navbar-brand">YLC管理系统</a>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<nav class="navbar-nav mr-auto">
+						<a href="" class="nav-link active font-weight-bold">首页</a>
+						<a href="" class="nav-link active font-weight-bold">系统管理</a>
+						<!-- <div class="dropdown">
+							<a class="nav-link dropdown-toggle active" data-toggle="dropdown">系统管理</a>						
+							<div class="dropdown-menu">
+								<a href="./tourRoutes.html" class="dropdown-item">国内</a>
+								<a href="./foreign.html" class="dropdown-item">国外</a>
+							</div>
+						</div> -->
+						<a href="#" class="nav-link">数据分析</a>
+					</nav>
+					<div class="text-light d-flex flex-md-row">
+						<i class="bi bi-person-circle" style="font-size: 30px;"></i>
+						<span class="ml-2 mr-4 font-weight-bold mt-2 pt-1">admin</span>
+						<a href="" class="text-light mt-2 pt-1">退出</a>
+					</div>
+				</div>
+			</header>
+			<!-- 主体 -->
+			<div class="d-flex flex-md-row">
+				<div class="accordion" id="xlBar" style="min-width: 150px;">
+					<!-- 线路 -->
+					<div class="list-group list-group-flush" id="routes">
+						<div class="bg-info text-light list-group-item bi-caret-right-fill font-weight-bold"
+							data-toggle="collapse" data-target="#xianlu">
+							线路管理
+						</div>
+						<!-- 折叠内容 -->
+						<div class="collapse" id="xianlu" data-parent="#xlBar">
+							<div class="list-group-item text-center">
+								<a href="#" class="active text-info">线路维护</a>
+							</div>
+							<div class="list-group-item text-center">
+								<a href="#" class="active text-dark">定制线路</a>
+							</div>
+						</div>
+					</div>
+					<!-- 订单 -->
+					<div class="list-group list-group-flush" id="orders">
+						<div class="bg-info text-light list-group-item bi-caret-right-fill font-weight-bold"
+							data-toggle="collapse" data-target="#Orders">
+							订单管理
+						</div>
+						<!-- 折叠内容 -->
+						<div class="collapse" id="Orders" data-parent="#xlBar">
+							<div class="list-group-item text-center">
+								<a href="#" class="active text-dark">确认订单</a>
+							</div>
+							<div class="list-group-item text-center">
+								<a href="#" class="active text-dark">退款申请</a>
+							</div>
+						</div>
+					</div>
+					<!-- 资源管理 -->
+					<div class="list-group list-group-flush" id="resources">
+						<div class="bg-info text-light list-group-item bi-caret-right-fill font-weight-bold"
+							data-toggle="collapse" data-target="#Rsources">
+							资源管理
+						</div>
+						<!-- 折叠内容 -->
+						<div class="collapse" id="Rsources" data-parent="#xlBar">
+							<div class="list-group-item text-center" id="hotelManagement" >
+								<a href="#" class="active text-dark">酒店管理</a>
+							</div>
+							<div class="list-group-item text-center">
+								<a href="#" class="active text-dark">车队管理</a>
+							</div>
+							<div class="list-group-item text-center">
+								<a href="#" class="active text-dark">领队管理</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 内容 -->
+				<div class="flex-grow-1 pl-4 pt-3 table-responsive">
+					<!-- 搜素框 -->
+					<div class="clearfix">
+						<!-- 全选框 -->
+						<div class="float-left mt-1 custom-control custom-checkbox">
+							<input type="checkbox" name="" id="checkAll" class="custom-control-input">
+							<label for="checkAll" class="custom-control-label">全选</label>
+						</div>
+						<!-- 搜素框 -->
+						<form class="float-right form-inline">
+							<div class="input-group">
+								<input type="text" class="" placeholder="搜索">
+								<div class="input-group-append">
+									<span class="input-group-text bi-search bg-info text-light"></span>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- 中部数据表格 -->
+					<div class="mt-3">
+						<table class=" table text-center table-sm">
+							<!-- 表头 -->
+							<thead class="bg-light">
+								<tr class="">
+									<th scope="col" class="align-middle"></th>
+									<th scope="col" class="align-middle">#</th>
+									<th scope="col" class="align-middle bi-sort-up-alt" style="min-width: 100px;">编号
+									</th>
+									<th scope="col" class="align-middle bi-sort-down-alt" style="min-width: 100px;">类型
+									</th>
+									<th scope="col" class="align-middle" style="min-width: 200px;">名称</th>
+									<th scope="col" class="align-middle" style="min-width: 100px;">价格 (元)</th>
+									<th scope="col" class="align-middle" style="min-width: 100px;">行程天数 (元)</th>
+									<th scope="col" class="align-middle" style="min-width: 100px;">成团人数 (人)</th>
+									<th scope="col" class="align-middle" style="min-width: 100px;">集合地点</th>
+									<th scope="col" class="align-middle" style="min-width: 100px;">操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="align-middle"><input type="checkbox" name="" id=""></td>
+									<td class="align-middle">1</td>
+									<td class="align-middle">M45</td>
+									<td class="align-middle">召集令</td>
+									<td class="align-middle">茂名-放鸡岛-3天2晚</td>
+									<td class="align-middle">2000</td>
+									<td class="align-middle">3</td>
+									<td class="align-middle">10</td>
+									<td class="align-middle">茂名</td>
+									<td class="align-middle">
+										<big class="mr-3">
+											<a href="" title="修改" class="text-warning bi-pencil-square"></a>
+										</big>
+										<big>
+											<a href="" title="删除" class="text-danger bi-trash-fill" data-toggle="modal" data-target="#delWaring"></a>
+										</big>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+					<!-- 底部按钮区 -->
+					<div class="clearfix mt-3">
+						<!-- 删除按钮 -->
+						<div class="float-left">
+							<button class="btn btn-danger bi-trash"> 批量删除</button>
+						</div>
+						<!-- 分页区 -->
+						<div class="float-right">
+							<ul class="pagination">
+								<li class="page-item">
+									<a href="" class="page-link bi-chevron-double-left"></a>
+								</li>
+								<li class="page-item">
+									<a href="" class="page-link">1</a>
+								</li>
+								<li class="page-item">
+									<a href="" class="page-link">2</a>
+								</li>
+								<li class="page-item">
+									<a href="" class="page-link">3</a>
+								</li>
+								<li class="page-item">
+									<a href="" class="page-link bi-chevron-double-right"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 页脚部分 -->
+		<div class="container-fluid">
+			<footer class="text-xl-right font-weight-bold card-footer">
+				<p>author作者:YLC</p>
+			</footer>
+		</div>
+		<!-- 模态框 -->
+		<!-- 删除确认模态框 -->
+		<div class="fade modal" id="delWaring">
+			<div class="modal-dialog modal-sm">
+				<!-- 模态框内容 -->
+				<div class="modal-content">
+					<div class="text-center modal-body" style="font-size: 20px;">
+						删除选中的线路
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-danger">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="/TSMSys/js/jquery-3.6.0.min.js"></script>
+		<script src="/TSMSys/js/bootstrap.min.js"></script>
+		<script src="/TSMSys/js/bootstrap.bundle.min.js"></script>
+		<script src="/TSMSys/js/TSMSys.menu.js"></script>
+	</body>
+</html>

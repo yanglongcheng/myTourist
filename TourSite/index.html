@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="YLC" />
+		<meta name="description" content="推荐美丽值得旅行的地方风景旅游网">
+		<meta name="keywords" content="旅游,旅游推荐">
+		<title>TourSite项目</title>
+		<!-- 引入css文件 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+		<style>
+			@media (max-width: 576px) {
+				.card-columns {
+					columns: 1;
+					-moz-column-count: 1;
+					-webkit-column-count: 1;
+				}
+			}
+
+			@media (max-width: 768px) and (min-width: 576px) {
+				.card-columns {
+					columns: 2;
+					-moz-column-count: 2;
+					-webkit-column-count: 2;
+				}
+			}
+
+			@media (min-width: 992px) {
+				.card-columns {
+					columns: 3;
+					-moz-column-count: 3;
+					-webkit-column-count: 3;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="">
+			<!-- 导航栏 -->
+			<div class="container-fluid px-0">
+				<nav class="navbar navbar-dark bg-primary navbar-expand-md">
+					<!-- <a href="" class="navbar-brand ">LOGO</a> -->
+					<img src="./img/logoNew.png" class="navbar-brand img-fluid rounded-circle border"
+						style="width: 60px;height: 50px;">
+					<!-- 切换器按钮 -->
+					<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarCollapse">
+						<nav class="navbar-nav mr-auto">
+							<li class="nav-item"><a href="./index.html" class="nav-link font-weight-bold">首页</a></li>
+
+							<div class="dropdown">								
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown">选择线路</a>
+									<!-- 子菜单 -->
+									<div class="dropdown-menu">
+										<a href="./tourRoutes.html?region=0" class="dropdown-item">国内</a>
+										<a href="./foreign.html?region=1" class="dropdown-item">国外</a>
+									</div>								
+							</div>
+							<a href="#" class="nav-link" id="contactLink" data-trigger="hover" data-placement="right"
+								title="扫码以下二维码联系我们">联系方式</a>
+							<div class="modal fade my-5" id="myPhone">
+								<div class="modal-dialog modal-sm">
+									<div class="modal-content" style="">
+										<!-- 头部 关闭按钮 -->
+										<div class="modal-header py-1 border-0">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+										<!-- 主体 -->
+										<div class="modal-body d-flex flex-column py-0 justify-content-center">
+											<p>联系电话:<span class="text-danger ml-2">15363946179</span></p>
+											<p>电子邮件:<span class="text-danger ml-2">15363946179@163.com</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</nav>
+						<div class="d-flex flex-row">
+							<form action="" class="form-inline">
+								<input type="text" class="form-control" placeholder="内容搜索" style="width: 200px;">
+								<button class="btn btn-outline-light ml-2">
+									<span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+											fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+											<path
+												d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+										</svg>
+									</span>
+								</button>
+							</form>
+						</div>
+
+						<!-- login登录 -->
+						<div class="navbar-nav ml-3 position-relative d-flex flex-row">
+							<a href="./login.html" class="nav-link active mr-2 stretched-link font-weight-bold">登录</a>
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+								class="bi bi-person-circle text-white mt-1" viewBox="0 0 16 16">
+								<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+							 <path fill-rule="evenodd"
+									d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+							</svg>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!-- 第一屏广告 -->
+
+			<div class="jumbotron pb-1 pt-4 bg-light">
+				<h1 class="text-info">旅游定制
+					<a href="#" class="btn btn-outline-primary ml-4 mb-2" data-toggle="modal"
+						data-target="#myPhone">联系电话</a>
+				</h1>
+				<p class="lead text-secondary">实地考察价格优惠，攻略齐全。为您提供团队游线路推荐,旅游胜地,知名旅游景点。</p>
+				<!-- 轮播器 -->
+				<div class="carousel slide carousel-fade" id="wallpaper" data-ride="carousel" data-pause="hover"
+					data-touch="true">
+					<!-- 轮播器内层 -->
+					<div class="carousel-inner">
+						<div class="carousel-item active" data-interval="2000" data-touch="true">
+							<img src="./img/轮播图01.jpg" class="img-fluid w-100 d-block"
+								style="width: 100%;height: 400px;">
+						</div>
+						<div class="carousel-item" data-interval="2000" data-touch="true">
+							<img src="./img/轮播图02.jpg" alt="" class="img-fluid w-100 d-block"
+								style="width: 100%;height: 400px;">
+						</div>
+						<div class="carousel-item" data-interval="2000" data-touch="true">
+							<img src="./img/轮播图03.png" alt="" class="img-fluid w-100 d-block"
+								style="width: 100%;height: 400px;">
+						</div>
+						<!-- 前进链接 -->
+						<a href="#wallpaper" class="carousel-control-prev" data-slide="prev"><span
+								class="carousel-control-prev-icon"></span></a>
+						<!-- 后退链接 -->
+						<a href="#wallpaper" class="carousel-control-next" data-slide="next"><span
+								class="carousel-control-next-icon"></span></a>
+						<!-- 指示器 -->
+						<ol class="carousel-indicators">
+							<li data-target="#wallpaper" data-slide-to="0" class="active"></li>
+							<li data-target="#wallpaper" data-slide-to="1"></li>
+							<li data-target="#wallpaper" data-slide-to="2"></li>
+						</ol>
+					</div>
+				</div>
+				<!-- 	<div class="">
+					<a href="#" class="btn btn-outline-primary mt-3">联系电话</a>
+				</div>
+				 -->
+			</div>
+			<div class="shadow m-4">
+				<h5 class="border-bottom border-success text-success font-weight-bold py-3 pl-3">追风之旅</h5>
+				<!-- 栅格系统 -->
+				<div class="row">
+					<div class="col-md-6">
+						<!-- 首页图文单元 card1-->
+						<div class="media align-self-lg-start m-4">
+							<img src="./img/fangji.jpg" alt="" class="img-fluid mr-3 ml-2 shadow"
+								style="width: 30%;height: 200px;">
+							<div class="position-relative media-body ml-3">
+								<h4 class="mt-0 mb-2 font-weight-bold">茂名放鸡岛<span
+										class="ml-2 text-warning mr-2 font-weight-bold">￥3000</span>起</h4>
+								<p class="text-muted">放鸡岛海洋度假公园位于南海之上，这里既有雄浑的山景，又有一望无际的海洋风光。</p>
+								<p class="font-weight-bold">地址：<span class="text-muted">茂名市电白县博贺镇翠湖路</span></p>
+								<p class="text-primary">开放时间：10:00-17:00开放</p>
+								<a href="" class="stretched-link">查看详情</a>
+							</div>
+						</div>
+					</div>
+					<!-- 栅格系统 card2 -->
+					<div class="col-md-6">
+						<div class="media align-self-end m-4">
+							<div class="media-body ml-2 position-relative">
+								<h4 class="mt-0 mb-2 font-weight-bold">霍城薰衣草<span
+										class="text-warning font-weight-bold ml-2 mr-2">￥5000</span>起</h4>
+								<p class="text-muted">新疆伊犁的霍城县是一座名副其实的薰衣草之城，这里种植了全国面积较大密度较高的薰衣草田。</p>
+								<p class="font-weight-bold">地址：<span class="text-muted">伊犁哈萨克自治州霍城县218国道</span></p>
+								<p class="text-primary">开放时间：具体营业状态需咨询景区</p>
+								<a href="" class="stretched-link">查看详情</a>
+							</div>
+							<img src="./img/xinjian.jpg" alt="" class="img-fluid ml-3 mr-2 shadow"
+								style="width: 30%;height: 200px;">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mb-4 m-4">
+				<h5 class="text-warning py-3 pl-3 border-bottom border-warning font-weight-bold">热门线路</h5>
+				<div class="card-columns mt-3 p-3">
+					<div class="card shadow">
+						<img src="./img/sanya.jpg" alt="" class="card-img-top img-fluid shadow"
+							style="width: 100%;height: 200px;">
+						<div class="card-body position-relative">
+							<h5 class="card-title text-dark font-weight-bold">南山文化旅游区<span
+									class="text-warning ml-2 mr-2">￥4000</span>起</h5>
+							<p class="text-muted card-text">
+								南山文化旅游区是我国有名的宗教与福寿文化景区，在这里既能欣赏山海自然美景，还可拜访众多佛教名胜、参观举世闻名的“南山海上观音”，获得佛教文化带来的心灵荡涤，体味回归自然本真的乐趣。
+							</p>
+							<p class="card-text font-weight-bold">地址：<span class="text-muted">伊犁哈萨克自治州霍城县218国道</span>
+							</p>
+							<p class="text-primary">开放时间：具体营业状态需咨询景区</p>
+							<a href="" class="stretched-link">查看详情</a>
+						</div>
+					</div>
+					<div class="card shadow">
+						<img src="./img/sz.jpg" alt="" class="card-img-top img-fluid shadow"
+							style="width: 100%;height: 200px;">
+						<div class="card-body position-relative">
+							<h5 class="card-title text-dark font-weight-bold">深圳野生动物园<span
+									class="text-warning ml-2 mr-2">￥1000</span>起</h5>
+							<p class="text-muted card-text">
+								深圳野生动物园建于山清水秀的西丽湖畔，占地面积60多万平方米，是一家放养式的野生动物园，集野生动物保护、展览、繁育、环境科普教育为一体，是国家AAAA级精品景区，全国科普教育基地。
+							</p>
+							<p class="card-text font-weight-bold">地址：<span
+									class="text-muted">深圳市南山区西丽湖路4086号（西丽湖东侧）</span>
+							</p>
+							<p class="text-primary">开放时间：具体营业状态需咨询景区</p>
+							<a href="" class="stretched-link">查看详情</a>
+						</div>
+					</div>
+					<div class="card shadow">
+						<img src="./img/qinhai.jpg" alt="" class="card-img-top img-fluid shadow"
+							style="width: 100%;height: 200px;">
+						<div class="card-body position-relative">
+							<h5 class="card-title text-dark font-weight-bold">茶卡盐湖<span
+									class="text-warning ml-2 mr-2">￥8000</span>起</h5>
+							<p class="text-muted card-text">
+								茶卡盐湖是一座有三千多年历史的盐场，湖水含盐量很大，会自然结晶成为一片白色的湖面，将天空、云朵和对岸的山都倒映在湖里，景色非常漂亮。游客还可以赤脚走到湖面上观看和拍摄自己的倒影，犹如天空之境。
+							</p>
+							<p class="card-text font-weight-bold">地址：<span class="text-muted">海西州乌兰县茶卡镇盐湖路9号</span>
+							</p>
+							<p class="text-primary">开放时间：具体营业状态需咨询景区</p>
+							<a href="" class="stretched-link">查看详情</a>
+						</div>
+					</div>
+					<div class="card shadow">
+						<img src="./img/guilin.jpg" alt="" class="card-img-top img-fluid shadow"
+							style="width: 100%;height: 200px;">
+						<div class="card-body position-relative">
+							<h5 class="card-title text-dark font-weight-bold">遇龙河漂流<span
+									class="text-warning ml-2 mr-2">￥5000</span>起</h5>
+							<p class="text-muted card-text">
+								漂流是游玩遇龙河推荐的方式，乘竹筏泛舟在遇龙河上，两岸山水如画，非常享受。坐上缓慢的竹筏，看两岸连绵起伏的山峰和田园风光。沿途还会经过小镇和很多古桥，底下则是清澈的河面，安静又放松。
+							</p>
+							<p class="card-text font-weight-bold">地址：<span class="text-muted">桂林市阳朔县遇龙河景区</span>
+							</p>
+							<p class="text-primary">开放时间：全年 08:00-17:00</p>
+							<a href="" class="stretched-link">查看详情</a>
+						</div>
+					</div>
+					<div class="card shadow">
+						<img src="./img/songz.jpg" alt="" class="card-img-top img-fluid shadow"
+							style="width: 100%;height: 200px;">
+						<div class="card-body position-relative">
+							<h5 class="card-title text-dark font-weight-bold">松赞林景区<span
+									class="text-warning ml-2 mr-2">￥6000</span>起</h5>
+							<p class="text-muted card-text">
+								松赞林寺全称噶丹松赞林寺，又名归化寺，是云南地区的大型藏传佛教寺庙，也是川滇一带的格鲁派（黄教）中心。该寺始建于公元1679年，依山而建，远望与拉萨布达拉宫颇有些相似，因其规模宏大，故有“小布达拉宫”的美誉。
+							</p>
+							<p class="card-text font-weight-bold">地址：<span
+									class="text-muted">迪庆藏族自治州香格里拉市建塘镇尼旺路3号</span>
+							</p>
+							<p class="text-primary">开放时间：07:30-19:00开放（17:30停止入园）</p>
+							<a href="" class="stretched-link">查看详情</a>
+						</div>
+					</div>
+					<div class="card shadow">
+						<img src="./img/cqin.jpg" alt="" class="card-img-top img-fluid shadow"
+							style="width: 100%;height: 200px;">
+						<div class="card-body position-relative">
+							<h5 class="card-title text-dark font-weight-bold">洪崖洞民俗风貌区<span
+									class="text-warning ml-2 mr-2">￥7000</span>起</h5>
+							<p class="text-muted card-text">
+								洪崖洞民俗风貌区是逛山城老街、观赏两江风光、品尝当地美食的好去处。洪崖洞商业街位于渝中区沧白路，长江、嘉陵江两江交汇的滨江地带，以具有巴渝传统建筑特色的“吊脚楼”为主体，依山就势，沿江而建。
+							</p>
+							<p class="card-text font-weight-bold">地址：<span class="text-muted">重庆市渝中区滨江路88号（嘉陵江畔）</span>
+							</p>
+							<p class="text-primary">开放时间：11:00-23:00开放</p>
+							<a href="" class="stretched-link">查看详情</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 页脚部分 -->
+			<div class="container-fluid">
+				<footer class="text-xl-right font-weight-bold card-footer">
+					<p>author作者:YLC</p>
+				</footer>
+			</div>
+		</div>
+	</body>
+	<!-- js文件 -->
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="js/tourSite.js"></script>
+</html>

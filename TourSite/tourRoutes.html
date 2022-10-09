@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="YLC" />
+		<meta name="description" content="推荐美丽值得旅行的地方风景旅游网">
+		<meta name="keywords" content="旅游,旅游推荐">
+		<title>TourSite项目</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+		<style>
+			/* 	.nav-pills .nav-link.active{
+				background-color: transparent !important;
+				border: 1px solid #007BFF !important;
+				color: #007BFF !important;
+			} */
+			.nav .nav-link.active {
+				background-color: transparent !important;
+				border: 1px solid #007BFF !important;
+				border-radius: 8px;
+				color: #007BFF !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="">
+			<!-- 导航栏 -->
+			<!-- 导航栏 -->
+			<div class="container-fluid px-0">
+				<nav class="navbar navbar-dark bg-primary navbar-expand-md">
+					<!-- <a href="" class="navbar-brand ">LOGO</a> -->
+					<img src="./img/logoNew.png" class="navbar-brand img-fluid rounded-circle border" style="width: 60px;height: 50px;">
+					<!-- 切换器按钮 -->
+					<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarCollapse">
+						<nav class="navbar-nav mr-auto">
+							<a href="./index.html" class="nav-link font-weight-bold">首页</a>
+							<div class="">
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown">选择线路</a>
+									<!-- 子菜单 -->
+									<div class="dropdown-menu">
+										<a href="./tourRoutes.html?region=0" class="dropdown-item">国内</a>
+										<a href="./foreign.html?region=1" class="dropdown-item">国外</a>
+									</div>
+								</li>
+							</div>
+							<a href="#" class="nav-link" id="contactLink" data-trigger="hover" data-placement="right" title="扫码以下二维码联系我们">联系方式</a>
+							
+						</nav>
+						<div class="d-flex flex-row">
+							<form action="" class="form-inline">
+							<input type="text" class="form-control" placeholder="内容搜索" style="width: 200px;">
+							<button class="btn btn-outline-light ml-2">
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+									  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+									</svg>
+								</span>
+							</button>
+						</form>
+						</div>
+						
+						<!-- login登录 -->
+						<div class="navbar-nav ml-3 position-relative d-flex flex-row">
+							<a href="./login.html" class="nav-link active mr-2 stretched-link font-weight-bold">登录</a>
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-circle text-white mt-1" viewBox="0 0 16 16">
+							  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+							  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+							</svg>
+						</div>
+					</div>
+				</nav>
+			
+				<!-- 页面主体 -->
+				<div class="d-md-flex mt-2">
+					<!-- 线路导航 -->
+					<div class="text-center nav d-md-block d-none mr-2" style="min-width: 8rem;">
+						<a href="#guangDong" class="nav-link active" data-toggle="tab">广东省</a>
+						<a href="#guangXi" class="nav-link" data-toggle="tab">广西省</a>
+					</div>
+					<div class="nav nav-pills d-sm-block d-md-none mr-2 mb-1" style="min-width: 8rem;">
+						<a href="#guangDong" class="nav-link active" data-toggle="pill">广东省</a>
+						<a href="#guangXi" class="nav-link" data-toggle="pill">广西省</a>
+					</div>
+					<!-- 广东线路展示卡片 -->
+					<div class="tab-content flex-grow-1 mt-2 ml-2">
+						<div class="tab-pane active" id="guangDong">
+							<h4 class="mb-3 border-bottom border-primary font-weight-bold pb-2">
+								<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-binoculars-fill pb-1" viewBox="0 0 18 18">
+								  <path d="M4.5 1A1.5 1.5 0 0 0 3 2.5V3h4v-.5A1.5 1.5 0 0 0 5.5 1h-1zM7 4v1h2V4h4v.882a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V13H9v-1.5a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5V13H1V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V4h4zM1 14v.5A1.5 1.5 0 0 0 2.5 16h3A1.5 1.5 0 0 0 7 14.5V14H1zm8 0v.5a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5V14H9zm4-11H9v-.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5V3z"/>
+								</svg>
+								<span class="text-primary ml-1">广东</span>
+							</h4>
+							<div class="row">
+								<div class="col-xl-3 col-md-6 col-sm-12">
+									<div class="card shadow">
+										<img src="./img/sanya.jpg" alt="" class="card-img-top">
+										<div class="card-body position-relative">
+											<h4 class="mt-0 mb-2 font-weight-bold">茂名放鸡岛<span
+													class="ml-2 text-warning mr-2 font-weight-bold">￥3000</span>起</h4>
+											<p class="text-muted">放鸡岛海洋度假公园位于南海之上，这里既有雄浑的山景，又有一望无际的海洋风光。</p>
+											<p class="font-weight-bold">地址：<span class="text-muted">茂名市电白县博贺镇翠湖路</span>
+											</p>
+											<p class="text-primary">开放时间：10:00-17:00开放</p>
+											<a href="./detail.html" class="stretched-link">查看详情</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6 col-sm-12">
+									<div class="card shadow">
+										<img src="./img/sz.jpg" alt="" class="card-img-top">
+										<div class="card-body position-relative">
+											<h5 class="card-title text-dark font-weight-bold">深圳野生动物园<span
+													class="text-warning ml-2 mr-2">￥1000</span>起</h5>
+											<p class="text-muted card-text">
+												深圳野生动物园建于山清水秀的西丽湖畔，占地面积60多万平方米，是一家放养式的野生动物园，集野生动物保护、展览、繁育、环境科普教育为一体，是国家AAAA级精品景区，全国科普教育基地。
+											</p>
+											<p class="card-text font-weight-bold">地址：<span
+													class="text-muted">深圳市南山区西丽湖路4086号（西丽湖东侧）</span>
+											</p>
+											<p class="text-primary">开放时间：具体营业状态需咨询景区</p>
+											<a href="" class="stretched-link">查看详情</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6 col-sm-12">
+									<div class="card shadow">
+										<img src="./img/changlong.jpg" alt="" class="card-img-top">
+										<div class="card-body position-relative">
+											<h5 class="card-title text-dark font-weight-bold">长隆欢乐世界<span
+													class="text-warning ml-2 mr-2">￥200</span>起</h5>
+											<p class="text-muted card-text">
+												长隆欢乐世界拥有多个大型游乐设备，诸如十环过山车、垂直过山车、超级大摆锤等，可以和小伙伴们一起感受刺激的体验。
+											</p>
+											<p class="card-text font-weight-bold">地址：<span
+													class="text-muted">广州市番禺区迎宾路长隆旅游度假区内</span>
+											</p>
+											<p class="text-primary">开放时间：10:00-18:00开放</p>
+											<a href="" class="stretched-link">查看详情</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6 col-sm-12 col-">
+									<div class="card shadow">
+										<img src="./img/zhuhai.jpg" alt="" class="card-img-top">
+										<div class="card-body position-relative">
+											<h5 class="card-title text-dark font-weight-bold">珠海长隆海洋王国<span
+													class="text-warning ml-2 mr-2">￥300</span>起</h5>
+											<p class="text-muted card-text">
+												珠海长隆海洋王国位于珠海长隆国际海洋度假区，是全球较大型的海洋主题乐园之一。
+											</p>
+											<p class="card-text font-weight-bold">地址：<span
+													class="text-muted">珠海市横琴新区富祥湾珠海长隆度假区内</span>
+											</p>
+											<p class="text-primary">开放时间：10:00-20:00开放</p>
+											<a href="" class="stretched-link">查看详情</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="guangXi">
+							<h4 class="mb-3 border-bottom border-primary font-weight-bold pb-2">
+								<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-binoculars-fill pb-1" viewBox="0 0 18 18">
+								  <path d="M4.5 1A1.5 1.5 0 0 0 3 2.5V3h4v-.5A1.5 1.5 0 0 0 5.5 1h-1zM7 4v1h2V4h4v.882a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V13H9v-1.5a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5V13H1V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V4h4zM1 14v.5A1.5 1.5 0 0 0 2.5 16h3A1.5 1.5 0 0 0 7 14.5V14H1zm8 0v.5a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5V14H9zm4-11H9v-.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5V3z"/>
+								</svg>
+								<span class="text-primary ml-1">广西</span>
+							</h4>
+							<div class="row mt-2">
+								<div class="col-xl-3 col-md-6 col-sm-12">
+									<div class="card shadow">
+										<img src="./img/congzuo.jpg" alt="" class="card-img-top">
+										<div class="card-body position-relative">
+											<h4 class="mt-0 mb-2 font-weight-bold">德天跨国瀑布景区<span
+													class="ml-2 text-warning mr-2 font-weight-bold">￥50</span>起</h4>
+											<p class="text-muted">
+												德天跨国瀑布景区位于中越边境广西壮族自治区崇左市，横跨中国和越南两个国家，宽度达200多米，是亚洲首屈一指的大瀑布，为世界第二跨国瀑布，也是影视剧《花千骨》的取景地之一。
+											</p>
+											<p class="font-weight-bold">地址：<span
+													class="text-muted">广西壮族自治区崇左市大新县硕龙镇</span>
+											</p>
+											<p class="text-primary">开放时间：08:00-22:20开放</p>
+											<a href="" class="stretched-link">查看详情</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6 col-sm-12">
+									<div class="card shadow">
+										<img src="./img/weizhou.jpg" alt="" class="card-img-top">
+										<div class="card-body position-relative">
+											<h5 class="card-title text-dark font-weight-bold">涠洲岛<span
+													class="text-warning ml-2 mr-2">￥1000</span>起</h5>
+											<p class="text-muted card-text">
+												涠洲岛位于北海南部，是我国面积较大的死火山岛，很多人把这里做为毕业旅行目的地。岛上鳄鱼山景区的火山岩、滴水丹屏的海蚀景观、风情各异的海滩、美丽的日出日落，都是涠洲岛的魅力所在。
+											</p>
+											<p class="card-text font-weight-bold">地址：<span
+													class="text-muted">北海市海城区涠洲镇</span>
+											</p>
+											<p class="text-primary">开放时间：08:00-18:00开放</p>
+											<a href="" class="stretched-link">查看详情</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6 col-sm-12">
+									<div class="card shadow">
+										<img src="./img/beihai.jpg" alt="" class="card-img-top">
+										<div class="card-body position-relative">
+											<h5 class="card-title text-dark font-weight-bold">北海银滩旅游度假区<span
+													class="text-warning ml-2 mr-2">￥2000</span>起</h5>
+											<p class="text-muted card-text">
+												银滩是位于北海南部的海滨度假区，它由银滩公园、海滩公园以及丰富的娱乐设施组成。这里拥有细腻的银白色沙滩，日落晚霞之景特别漂亮，也是下海游泳和玩水上项目的名地。
+											</p>
+											<p class="card-text font-weight-bold">地址：<span
+													class="text-muted">北海市银海区北海银滩景区东门12号功能岛</span>
+											</p>
+											<p class="text-primary">开放时间：08:00-19:00开放</p>
+											<a href="" class="stretched-link">查看详情</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6 col-sm-12 col-">
+									<div class="card shadow">
+										<img src="./img/lijiang.jpg" alt="" class="card-img-top">
+										<div class="card-body position-relative">
+											<h5 class="card-title text-dark font-weight-bold">漓江风景名胜区<span
+													class="text-warning ml-2 mr-2">￥500</span>起</h5>
+											<p class="text-muted card-text">
+												学语文课本有篇“桂林山水甲天下”指的就是游漓江。漓江的两岸山峰伟岸挺拔，形态万千，是桂林风光的精华。
+											</p>
+											<p class="card-text font-weight-bold">地址：<span
+													class="text-muted">桂林市灵川县（起于磨盘山客运港（竹江客运港）</span>
+											</p>
+											<p class="text-primary">开放时间：08:00-17:00开放</p>
+											<a href="" class="stretched-link">查看详情</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="js/tourSite.js"></script>
+</html>

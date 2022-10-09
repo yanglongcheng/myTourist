@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="YLC" />
+		<meta name="description" content="推荐美丽值得旅行的地方风景旅游网">
+		<meta name="keywords" content="旅游,旅游推荐">
+		<title>TourSite项目</title>
+		<!-- 引入css文件 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+		<style>
+			@media (max-width: 576px) {
+				.card-columns {
+					columns: 1;
+					-moz-column-count: 1;
+					-webkit-column-count: 1;
+				}
+			}
+
+			@media (max-width: 768px) and (min-width: 576px) {
+				.card-columns {
+					columns: 2;
+					-moz-column-count: 2;
+					-webkit-column-count: 2;
+				}
+			}
+
+			@media (min-width: 992px) {
+				.card-columns {
+					columns: 3;
+					-moz-column-count: 3;
+					-webkit-column-count: 3;
+				}
+			}
+
+			.breadcrumb-item+.breadcrumb-item::before {
+				content: url(./img/box-arrow-right.svg);
+				margin-top: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 面包屑导航 -->
+		<div class="">
+			<nav>
+				<ol class="breadcrumb bg-link mb-0 font-weight-bold">
+					<!-- 导航条目 -->
+					<li class="breadcrumb-item"><a href="./tourRoutes.html">国内</a></li>
+					<li class="breadcrumb-item"><a href="./tourRoutes.html">广东</a></li>
+					<li class="breadcrumb-item active text-danger">茂名</li>
+				</ol>
+			</nav>
+		</div>
+		<!-- 线路卡片 -->
+		<div class="card border-0">
+			<h4 class="card-header border-0 bg-transparent"><span class="badge-pill badge-info">召集中</span><a href=""
+					class="text-warning ml-3 font-weight-bold">茂名-放鸡岛-3天2晚</a></h4>
+			<!-- 栅格排版 -->
+			<div class="card-body row">
+				<!-- 图片介绍 -->
+				<div class="col-md-7 mb-3">
+					<img src="./img/fangji.jpg" alt="" class="img-fluid shadow">
+				</div>
+				<!-- 文字介绍 -->
+				<ul class="col-md-5 list-group pr-0">
+					<li class="list-group-item border-0">预定价格：<span class="font-weight-bold text-danger">￥2000</span>
+					</li>
+					<li class="list-group-item border-0">交通方式：轮船</li>
+					<li class="list-group-item border-0">行程天数：3天</li>
+					<li class="list-group-item border-0">出发地：全国</li>
+					<li class="list-group-item border-0">集合点：茂名</li>
+					<li class="list-group-item border-0">
+						<button class="btn btn-primary">立即预定</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 线路详情板块 -->
+		<div class="">
+			<ul class="nav nav-tabs ml-3 mb-3">
+				<li class="nav-item">
+					<a href="#journey" class="nav-link active" data-toggle="tab">
+						<h6>行程</h6>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#assessy" class="nav-link" data-toggle="tab">
+						<h6>评价</h6>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#price" class="nav-link" data-toggle="tab">
+						<h6>价格说明</h6>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#pay" class="nav-link" data-toggle="tab">
+						<h6>付款方式</h6>
+					</a>
+				</li>
+			</ul>
+			<!-- 选项卡内容 -->
+			<div class="tab-content border border-top-0 pb-2 ml-3">
+				<div class="tab-pane fade show active" id="journey">
+					<div class="list-group pt-4">
+						<div class="list-group-item border-0 py-0">
+							<h6>
+								<span class="bg-primary text-light rounded-circle font-weight-bold p-2">D1</span>
+							</h6>
+							<div class="border-left border-warning ml-3 pl-3 pb-1">
+								<p>茂名高铁站集合</p>
+								<p>到达后坐轮船过放鸡岛，当晚入住酒店。白天进行观海洋生物</p>
+							</div>
+						</div>
+						<div class="list-group-item border-0 py-0">
+							<h6>
+								<span class="bg-primary text-light rounded-circle font-weight-bold p-2">D2</span>
+							</h6>
+							<div class="border-left border-warning ml-3 pl-3 pb-1">
+								<p>目标物种：珊瑚鱼、灯笼鱼、罗非鱼</p>
+								<p>早饭后前往海滩冲浪</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="assessy">
+					<div class="list-group list-group-flush">
+						<div class="list-group-item d-flex flex-row">
+							<div class="pb-1">
+								<i class="bi bi-people-fill text-primary ml-2" style="font-size: 25px;"></i>
+								<div class="ml-1">user1</div>
+							</div>
+							<div class="ml-3">
+								<p class="mt-2" style="height: 13px;">海很漂亮，让人有一种自由感觉</p>
+								<small class="">2020-10-1</small>
+							</div>
+						</div>
+						<div class="list-group-item d-flex flex-row">
+							<div class="pb-1">
+								<i class="bi bi-people-fill text-primary ml-2" style="font-size: 25px;"></i>
+								<div class="ml-1">user2</div>
+							</div>
+							<div class="ml-3">
+								<p class="mt-2" style="height: 13px;">鱼很好看还很好吃，下次还来</p>
+								<small class="">2019-1-10</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="price">
+					<div class="list-group list-group-flush">
+						<div class="list-group-item d-flex">
+							<div class="pb-2">
+								<p>1、本起价为近24小时内，按2成人出行共用一间房测算的<span class="text-warning">单人价格</span>。</p>
+								<p>2、产品价格会根据您所选出发日期、出行人数、入住酒店/房型、航班、附加服务等的不同有所差别，实际价格以下单时为准。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="pay">
+					<div class="list-group list-group-flush">
+						<div class="list-group-item d-flex flex-column py-0 ml-3">
+							<div class="d-flex flex-row mb-2">
+								<i class="bi bi-wechat text-success mr-2" style="font-size: 30px;"></i>
+								<a href="#" data-toggle="modal" data-target="#wetPay"
+									class="btn btn-outline-success text-success ml-0 font-weight-bold mt-2">微信支付</a>
+								<!-- 支付模态框 -->
+								<div class="modal fade my-5" id="wetPay">
+									<div class="modal-dialog modal-sm modal-dialog-centered">
+										<div class="modal-content" style="">
+											<!-- 头部 关闭按钮-->
+											<div class="modal-header py-1 border-0">
+												<button type="button" class="close"
+													data-dismiss="modal">&times;</button>
+											</div>
+											<!-- 支付主体 -->
+											<div class="modal-body d-flex flex-fill py-0 justify-content-center">
+												<img src="./img/wetpay.jpg" alt="" class="img-fluid"
+													style="width: 300px;height: 300px;">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex flex-row mb-2">
+								<i class="bi bi-alipay text-primary mr-2" style="font-size: 25px;"></i>
+								<a href="#" data-toggle="modal" data-target="#aliPay"
+									class="btn btn-outline-primary text-primary ml-1 font-weight-bold ">支付宝支付</a>
+								<!-- 支付模态框 -->
+								<div class="modal fade my-5" id="aliPay">
+									<div class="modal-dialog modal-sm modal-dialog-centered">
+										<div class="modal-content" style="">
+											<!-- 头部 关闭按钮-->
+											<div class="modal-header py-1 border-0">
+												<button type="button" class="close"
+													data-dismiss="modal">&times;</button>
+											</div>
+											<!-- 支付主体 -->
+											<div class="modal-body d-flex flex-fill py-0 justify-content-center">
+												<img src="./img/alipay.jpg" alt="" class="img-fluid"
+													style="width: 300px;height: 300px;">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+</html>
